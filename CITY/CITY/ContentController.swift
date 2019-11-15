@@ -1,8 +1,4 @@
 //  ContentController.swift
-//画像
-//住所
-//レイアウト直す
-//スワイプで戻れるようにする
 
 import UIKit
 import Foundation
@@ -30,7 +26,7 @@ class ContentController: UIViewController{
     
     view.addSubview(imageView)
     imageView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-    self.view.sendSubview(toBack: imageView)
+    self.view.sendSubviewToBack(imageView)
     
     var post: Post? {
       didSet {

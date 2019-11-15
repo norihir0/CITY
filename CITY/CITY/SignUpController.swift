@@ -120,10 +120,10 @@ class SignUpController: UIViewController{
   
   let termsButton: UIButton = {
     let button = UIButton(type: .system)
-    let attributedTitle = NSMutableAttributedString(string: "登録前に必ず",attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12),NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-    attributedTitle.append(NSAttributedString(string: "利用規約", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14) ,NSAttributedStringKey.foregroundColor: UIColor.mainPink()
+    let attributedTitle = NSMutableAttributedString(string: "登録前に必ず",attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+    attributedTitle.append(NSAttributedString(string: "利用規約", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14) ,NSAttributedString.Key.foregroundColor: UIColor.mainPink()
       ]))
-    attributedTitle.append(NSAttributedString(string: "をお読みください", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12) ,NSAttributedStringKey.foregroundColor: UIColor.lightGray
+    attributedTitle.append(NSAttributedString(string: "をお読みください", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12) ,NSAttributedString.Key.foregroundColor: UIColor.lightGray
       ]))
     button.setAttributedTitle(attributedTitle, for: .normal)
     button.addTarget(self, action: #selector(handleShowTerms), for: .touchUpInside)

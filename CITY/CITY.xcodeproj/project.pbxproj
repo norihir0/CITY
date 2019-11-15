@@ -25,13 +25,12 @@
 		11A17FB71F5EF1DD002F82CF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A17FB61F5EF1DD002F82CF /* User.swift */; };
 		1575EA80DFAF31CDDB1B9FEF /* Pods_CITY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DB8695992492EF66EBB9A /* Pods_CITY.framework */; };
 		9803B1A91FCD334F0073737F /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9803B1A81FCD334F0073737F /* ContentController.swift */; };
-		982ECF3D209C2834003D065E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982ECF3C209C2834003D065E /* GoogleService-Info.plist */; };
 		98327B3C1F55CE360005BB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98327B3B1F55CE360005BB23 /* AppDelegate.swift */; };
 		98327B3E1F55CE360005BB23 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98327B3D1F55CE360005BB23 /* MainTabBarController.swift */; };
 		98327B411F55CE360005BB23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98327B3F1F55CE360005BB23 /* Main.storyboard */; };
 		98327B431F55CE360005BB23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98327B421F55CE360005BB23 /* Assets.xcassets */; };
 		98327B461F55CE360005BB23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98327B441F55CE360005BB23 /* LaunchScreen.storyboard */; };
-		983930401F7255E1004CE860 /* GoogleService-Info-debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9839303F1F72550E004CE860 /* GoogleService-Info-debug.plist */; };
+		987CC0ED237E652800104473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 987CC0EC237E652800104473 /* GoogleService-Info.plist */; };
 		9884B8741FBD710D000CA629 /* TermsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9884B8731FBD710C000CA629 /* TermsController.swift */; };
 		98CE831722071BB200FA1377 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CE831622071BB200FA1377 /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +56,6 @@
 		1E3DB8695992492EF66EBB9A /* Pods_CITY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CITY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44534B92F4FCB97E5241A5BB /* Pods-CITY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CITY.release.xcconfig"; path = "Pods/Target Support Files/Pods-CITY/Pods-CITY.release.xcconfig"; sourceTree = "<group>"; };
 		9803B1A81FCD334F0073737F /* ContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
-		982ECF3C209C2834003D065E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98327B381F55CE360005BB23 /* CITY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CITY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98327B3B1F55CE360005BB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98327B3D1F55CE360005BB23 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -65,7 +63,7 @@
 		98327B421F55CE360005BB23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98327B451F55CE360005BB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98327B471F55CE360005BB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9839303F1F72550E004CE860 /* GoogleService-Info-debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-debug.plist"; sourceTree = "<group>"; };
+		987CC0EC237E652800104473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9884B8731FBD710C000CA629 /* TermsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsController.swift; sourceTree = "<group>"; };
 		98CE831622071BB200FA1377 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,8 +168,7 @@
 				98327B421F55CE360005BB23 /* Assets.xcassets */,
 				98327B441F55CE360005BB23 /* LaunchScreen.storyboard */,
 				98327B471F55CE360005BB23 /* Info.plist */,
-				982ECF3C209C2834003D065E /* GoogleService-Info.plist */,
-				9839303F1F72550E004CE860 /* GoogleService-Info-debug.plist */,
+				987CC0EC237E652800104473 /* GoogleService-Info.plist */,
 			);
 			path = CITY;
 			sourceTree = "<group>";
@@ -229,13 +226,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "山本憲弘";
 				TargetAttributes = {
 					98327B371F55CE360005BB23 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = Z23U87ND2B;
-						LastSwiftMigration = 0900;
+						DevelopmentTeam = 9E7JYW94G2;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -247,7 +244,7 @@
 			};
 			buildConfigurationList = 98327B331F55CE360005BB23 /* Build configuration list for PBXProject "CITY" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -270,10 +267,9 @@
 			files = (
 				98327B461F55CE360005BB23 /* LaunchScreen.storyboard in Resources */,
 				11A17FB31F5EF0D8002F82CF /* MapStyle.json in Resources */,
-				983930401F7255E1004CE860 /* GoogleService-Info-debug.plist in Resources */,
+				987CC0ED237E652800104473 /* GoogleService-Info.plist in Resources */,
 				98327B431F55CE360005BB23 /* Assets.xcassets in Resources */,
 				98327B411F55CE360005BB23 /* Main.storyboard in Resources */,
-				982ECF3D209C2834003D065E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -410,6 +407,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -417,6 +415,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -456,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -466,6 +466,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -473,6 +474,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -509,16 +511,16 @@
 				BUNDLE_ID_SUFFIX = "-debug";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z23U87ND2B;
+				DEVELOPMENT_TEAM = 9E7JYW94G2;
 				INFOPLIST_FILE = CITY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Sirube.CITY-production";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sirube.CITY;
+				PRODUCT_NAME = CITY;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -531,16 +533,16 @@
 				BUNDLE_ID_SUFFIX = "-production";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z23U87ND2B;
+				DEVELOPMENT_TEAM = 9E7JYW94G2;
 				INFOPLIST_FILE = CITY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Sirube.CITY-production";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sirube.CITY;
+				PRODUCT_NAME = CITY;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

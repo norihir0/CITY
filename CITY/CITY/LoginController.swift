@@ -113,8 +113,8 @@ class LoginController: UIViewController/*,GIDSignInUIDelegate*/{
   
   let dontHaveAccountButton: UIButton = {
     let button = UIButton(type: .system)
-    let attributedTitle = NSMutableAttributedString(string: "アカウントを持っていませんか？",attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12),NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-    attributedTitle.append(NSAttributedString(string: "新規登録", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14) ,NSAttributedStringKey.foregroundColor: UIColor.mainPink()
+    let attributedTitle = NSMutableAttributedString(string: "アカウントを持っていませんか？",attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+    attributedTitle.append(NSAttributedString(string: "新規登録", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14) ,NSAttributedString.Key.foregroundColor: UIColor.mainPink()
       ]))
     
     button.setAttributedTitle(attributedTitle, for: .normal)
@@ -129,7 +129,7 @@ class LoginController: UIViewController/*,GIDSignInUIDelegate*/{
   
   let termsButton: UIButton = {
     let button = UIButton(type: .system)
-    let attributedTitle = NSMutableAttributedString(string: "利用規約を読む",attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12),NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+    let attributedTitle = NSMutableAttributedString(string: "利用規約を読む",attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor: UIColor.lightGray])
     button.setAttributedTitle(attributedTitle, for: .normal)
     button.addTarget(self, action: #selector(handleShowTerms), for: .touchUpInside)
     return button

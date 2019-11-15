@@ -90,7 +90,7 @@ class PreviewPhotoContainerView: UIView, UITextViewDelegate{
     containerView.alpha = 0.3
     addSubview(containerView)
     containerView.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 70, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 150)
-    containerView.sendSubview(toBack: textView)
+    containerView.sendSubviewToBack(textView)
     
     addSubview(textView)
     textView.anchor(top: containerView.topAnchor, left: containerView.leftAnchor, bottom: containerView.bottomAnchor, right: containerView.rightAnchor, paddingTop: 12, paddingLeft: 12, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
@@ -107,7 +107,6 @@ class PreviewPhotoContainerView: UIView, UITextViewDelegate{
     return button
   }()
   
-  //こっちにuid認証いるかも
   @objc func handleProceed() {
     guard let postImage = previewImageView.image else { return }
     
@@ -118,7 +117,7 @@ class PreviewPhotoContainerView: UIView, UITextViewDelegate{
       PHAssetChangeRequest.creationRequestForAsset(from: postImage)
     })
     
-    guard let uploadData = UIImageJPEGRepresentation(postImage, 0.5) else { return }
+    guard let uploadData = postImage.jpegData(compressionQuality: 0.5) else { return }
     
     let filename = NSUUID().uuidString
     Storage.storage().reference().child("posts").child(filename).putData(uploadData, metadata: nil)
@@ -147,8 +146,8 @@ class PreviewPhotoContainerView: UIView, UITextViewDelegate{
     let mref = messageUserPostRef.childByAutoId()
     let time = NSDate.timeIntervalSinceReferenceDate
     
-    let values = ["creationdate": String(time), "caption": "\(textView.text!)", "imageUrl": imageUrl, "latitude":latitude, "longitude":longitude, "mref": "\(mref)"] as [String : Any]
-    let mvalues = ["creationdate": String(time), "caption": "\(textView.text!)", "imageUrl": imageUrl, "latitude":latitude, "longitude":longitude,] as [String : Any]
+    let values = ["creationdate": String(time), "caption": "\(textView.text!)", "imageUrl": imageUrl, "latitude":latitude ?? "20", "longitude":longitude ?? "30", "mref": "\(mref)"] as [String : Any]
+    let mvalues = ["creationdate": String(time), "caption": "\(textView.text!)", "imageUrl": imageUrl, "latitude":latitude ?? "20", "longitude":longitude ?? "30",] as [String : Any]
     
     ref.updateChildValues(values) { (err, ref) in
       if let err = err {

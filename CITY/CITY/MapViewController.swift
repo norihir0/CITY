@@ -1,5 +1,4 @@
 //  MapViewController.swift
-//  MapViewController.swift
 
 import UIKit
 import CoreLocation
@@ -35,20 +34,15 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
     gmap.settings.myLocationButton = true
     view.addSubview(gmap)
     gmap.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: bottomLayoutGuide.topAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-    //    if #available(iOS 11, *) {
-    //      gmap.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.topAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-    //    } else {
-    //      gmap.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: bottomLayoutGuide.topAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-    //    }
-//    do {
-//      if let styleURL = Bundle.main.url(forResource: "MapStyle", withExtension: "json") {
-//        gmap.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
-//      } else {
-//        NSLog("Unable to find MapStyle.json")
-//      }
-//    } catch {
-//      NSLog("One or more of the map styles failed to load. \(error)")
-//    }
+    do {
+      if let styleURL = Bundle.main.url(forResource: "MapStyle", withExtension: "json") {
+        gmap.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+      } else {
+        NSLog("Unable to find MapStyle.json")
+      }
+    } catch {
+      NSLog("One or more of the map styles failed to load. \(error)")
+    }
     
     gmap.delegate = self
   }
@@ -86,10 +80,10 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
   
   func makeMarker(postData: PostData) -> [GMSMarker] {
     let marker = GMSMarker()
-//    let markerImage = UIImage(named:"marker")!.withRenderingMode(.alwaysOriginal)
-//    let markerView = UIImageView(image: markerImage)
-//    marker.iconView = markerView
-//    pinView = markerView
+    //    let markerImage = UIImage(named:"marker")!.withRenderingMode(.alwaysOriginal)
+    //    let markerView = UIImageView(image: markerImage)
+    //    marker.iconView = markerView
+    //    pinView = markerView
     
     let latitude = Double(postData.latitude)
     let longitude = Double(postData.longitude)
@@ -134,6 +128,8 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
       print("起動時のみ位置情報の取得が許可されています。")
       mapManager.startUpdatingLocation()
       break
+    @unknown default:
+      fatalError()
     }
   }
   
@@ -144,7 +140,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
     let now :GMSCameraPosition = GMSCameraPosition.camera(withLatitude: latitude,longitude:longitude,zoom:16)
     gmap.camera = now
   }
-
+  
   func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
     let text = marker.title!
     let date = marker.snippet!
@@ -155,7 +151,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDe
     nextViewController.imageUrl = imageUrl!
     self.navigationController?.pushViewController(nextViewController, animated: true)
   }
-
+  
   func mapView(_ mapView:GMSMapView, didLongPressInfoWindowOf marker:GMSMarker) {
     reportAlertMessage(message:"不適切なコンテンツとして報告しますか？" ,marker: marker)
   }

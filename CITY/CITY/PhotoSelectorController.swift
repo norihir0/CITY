@@ -14,7 +14,7 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
     setupNavigationButtons()
     collectionView?.register(PhotoSelectorCell.self, forCellWithReuseIdentifier: cellId)
     
-    collectionView?.register(PhotoSelectorHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+    collectionView?.register(PhotoSelectorHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     
     fetchPhotos()
   }
@@ -90,7 +90,7 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
     header.photoImageView.image = selectedImage
     
     if let selectedImage = selectedImage {
-      if let index = self.images.index(of: selectedImage) {
+      if let index = self.images.firstIndex(of: selectedImage) {
         let selectedAsset = self.assets[index]
         
         let imageManager = PHImageManager.default()

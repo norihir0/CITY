@@ -17,7 +17,7 @@ class UserProfileController: UICollectionViewController,UICollectionViewDelegate
     navigationItem.title = "マイページ"
     view.backgroundColor = .white
     collectionView?.backgroundColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.1)
-    collectionView?.register(UserProfileHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
+    collectionView?.register(UserProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerId")
     collectionView?.register(UserProfileCell.self, forCellWithReuseIdentifier: cellId)
     collectionView?.alwaysBounceVertical = true
     setupSettingButton()

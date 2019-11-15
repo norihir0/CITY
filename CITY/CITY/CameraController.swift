@@ -49,6 +49,8 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate, CLLocat
       print("起動時のみ位置情報の取得が許可されています。")
       mapManager.startUpdatingLocation()
       break
+    @unknown default:
+      fatalError()
     }
   }
   
@@ -67,9 +69,6 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate, CLLocat
     longitude = userLocation.coordinate.longitude
   }
   
-  
-  
-  
   let dismissButton: UIButton = {
     let button = UIButton(type: .system)
     button.setImage(#imageLiteral(resourceName: "cancel_shadow").withRenderingMode(.alwaysOriginal), for: .normal)
@@ -77,7 +76,6 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate, CLLocat
     return button
   }()
   
-
   @objc func handleDismiss() {
     dismiss(animated: true, completion: nil)
   }
@@ -94,18 +92,14 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate, CLLocat
   }
   
   fileprivate func setupHUD() {
-    
     let safeAreaInsets: UIEdgeInsets
     if #available(iOS 11, *) {
       safeAreaInsets = view.safeAreaInsets
     } else {
       safeAreaInsets = .zero
     }
-    
-    
     view.addSubview(capturePhotoButton)
     view.addSubview(dismissButton)
-    
     capturePhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     if #available(iOS 11.0, *) {
       capturePhotoButton.anchor(top: nil, left: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 50, paddingRight: 0, width: 80, height: 80)
@@ -114,10 +108,6 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate, CLLocat
       capturePhotoButton.anchor(top: nil, left: nil, bottom: view.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 30, paddingRight: 0, width: 80, height: 80)
       dismissButton.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 12, paddingBottom: 0, paddingRight: 0, width: 30, height: 30)
     }
-    
-    //.
-    
-
   }
   
   @available(iOS 10.0, *)
