@@ -32,7 +32,6 @@ class UserProfileHeader: UICollectionViewCell{
   
   var user: User?
   public func fetchUser() {
-    
     guard let uid =  Auth.auth().currentUser?.uid else {return}
     Database.fetchUserWithUID(uid: uid) { (user) in
       self.user = user
