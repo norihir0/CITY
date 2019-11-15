@@ -70,4 +70,5 @@ extension Database {
       print("Failed to fetch user for posts",err)
     }
   }
+  
 }

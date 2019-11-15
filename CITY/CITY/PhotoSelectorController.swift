@@ -148,5 +148,6 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
   @objc func handleCancel() {
     dismiss(animated: true, completion: nil)
   }
+  
 }
 

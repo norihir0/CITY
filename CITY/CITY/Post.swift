@@ -29,4 +29,5 @@ struct Post {
     
     self.imageUrl = dictionary["imageUrl"] as? String ?? ""
   }
+  
 }
