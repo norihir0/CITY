@@ -128,10 +128,6 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
     return cell
   }
   
-//  override var prefersStatusBarHidden: Bool {
-//    return true
-//  }
-  
   fileprivate func setupNavigationButtons() {
     navigationController?.navigationBar.tintColor = .black
     navigationItem.title = "カメラロール"
@@ -140,9 +136,6 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
   }
   
   @objc func handleNext() {
-    //let postViewController = PostViewController()
-    //postViewController.selectedImage = header?.photoImageView.image
-    //navigationController?.pushViewController(postViewController, animated: true)
   }
   
   @objc func handleCancel() {

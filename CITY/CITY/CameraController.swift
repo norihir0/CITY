@@ -165,5 +165,4 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate, CLLocat
     captureSession.startRunning()
   }
   
-  
 }

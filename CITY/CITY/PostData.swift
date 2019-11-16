@@ -23,4 +23,5 @@ struct PostData {
     
     self.imageUrl = dictionary["imageUrl"] as? String ?? ""
   }
+  
 }

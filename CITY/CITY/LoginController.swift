@@ -4,18 +4,15 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class LoginController: UIViewController/*,GIDSignInUIDelegate*/{
+class LoginController: UIViewController{
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    //GIDSignIn.sharedInstance().uiDelegate = self
     view.backgroundColor = .white
     navigationItem.title = "ログイン"
     view.addSubview(logoContainerView)
     logoContainerView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 70, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 150)
     setupInputFields()
-//    view.addSubview(dontHaveAccountButton)
-//    dontHaveAccountButton.anchor(top:logoContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 170, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 100)
     view.addSubview(termsButton)
     termsButton.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 9, paddingRight: 0, width: 0, height: 20)
   }

@@ -22,8 +22,6 @@ class PreviewPhotoContainerView: UIView, UITextViewDelegate{
     addSubview(previewImageView)
     previewImageView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 70, paddingLeft: 0, paddingBottom: 85, paddingRight: 0, width: 0, height: 0)
     //レイアウト微調整
-    
-    
     addSubview(proceedButton)
     proceedButton.anchor(top: nil, left: nil, bottom: previewImageView.bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 27, paddingRight: 27, width: 30, height: 30)
     

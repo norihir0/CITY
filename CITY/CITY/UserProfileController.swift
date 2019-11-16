@@ -30,85 +30,6 @@ class UserProfileController: UICollectionViewController,UICollectionViewDelegate
     view.backgroundColor = UIColor.white
   }
   
-//  func touchEditButton(for cell: UserProfileCell) {
-//    let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-//    alertController.addAction(UIAlertAction(title: "投稿を編集する", style: .default, handler: { (_) in
-//      self.editPost(for: cell)
-//    }))
-//    alertController.addAction(UIAlertAction(title: "投稿を削除する", style: .destructive, handler: { (_) in
-//      self.deletePost(for: cell)
-//    }))
-//    alertController.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
-//    alertController.popoverPresentationController?.sourceView = self.view
-//    alertController.popoverPresentationController?.sourceRect = CGRect(x: 100.0,y: 100.0,width: 20.0,height: 20.0)
-//    present(alertController, animated: true, completion: nil)
-//  }
-//
-//  func editPost(for cell: UICollectionViewCell) {
-//    guard let indexPath = collectionView?.indexPath(for: cell) else {return}
-//    let post = self.posts[indexPath.item]
-//    let alertController = UIAlertController(title: "投稿文の編集", message: "投稿文を編集してください。\n編集前:\(post.caption)", preferredStyle:.alert)
-//    alertController.addTextField(configurationHandler: {(text:UITextField!) -> Void in
-//    })
-//
-//    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
-//      let textField = alertController.textFields![0] as UITextField
-//      print(textField)
-//      guard let uid = Auth.auth().currentUser?.uid else {return}
-//      guard let newCaption = textField.text else {return} //一文字入力されてる場合のみ有効にする
-//      guard let postId = post.id else {return}
-//
-//      let mvalues = ["caption":newCaption, "creationdate": post.time, "latitude":post.latitude, "longitude":post.longitude] as [String : Any]
-//      let values = ["caption":newCaption, "creationdate": post.time, "latitude":post.latitude, "longitude":post.longitude, "mref": post.reference] as [String : Any]
-//
-//      Database.database().reference().child("posts").child(uid).child(postId).updateChildValues(values, withCompletionBlock: { (err, ref) in
-//        if let err = err {
-//          print("Failed to save new user info into db:", err)
-//          return
-//        }
-//        print("Successfully saved user info to db")
-//
-//        let mref = post.reference
-//        let autoid = mref.substring(from: mref.index(mref.startIndex, offsetBy: 47))
-//
-//        Database.database().reference().child("message").child(autoid).updateChildValues(mvalues, withCompletionBlock: { (err, ref) in
-//          if let err = err {
-//            print("Failed to save new user info into message db:", err)
-//            return
-//          }
-//          print("Successfully saved user info to message db")
-//          self.posts.removeAll()
-//          self.fetchPost()
-//        })
-//      })
-//    }))
-//    alertController.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
-//    alertController.popoverPresentationController?.sourceView = self.view
-//    alertController.popoverPresentationController?.sourceRect = CGRect(x: 100.0,y: 100.0,width: 20.0,height: 20.0)
-//    present(alertController, animated:true, completion:nil)
-//  }
-  
-//  func deletePost(for cell: UICollectionViewCell) {
-//    guard let indexPath = collectionView?.indexPath(for: cell) else { return }
-//    let post = self.posts[indexPath.item]
-//    print("remove"+"\(post.caption)")
-//    guard let postId = post.id else { return }
-//    guard let uid = Auth.auth().currentUser?.uid else { return }
-//    let mref = post.reference
-//    let autoid = mref.substring(from: mref.index(mref.startIndex, offsetBy: 42))
-//    let alertController = UIAlertController(title: "投稿を削除", message: "本当にこの投稿を削除してよろしいですか？", preferredStyle: .alert)
-//    alertController.addAction(UIAlertAction(title: "削除", style: .destructive, handler: { (_) in
-//      Database.database().reference().child("posts").child(uid).child(postId).removeValue()
-//      Database.database().reference().child("message").child(autoid).removeValue()
-//      self.posts.removeAll()
-//      self.fetchPost()
-//    }))
-//    alertController.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))
-//    alertController.popoverPresentationController?.sourceView = self.view
-//    alertController.popoverPresentationController?.sourceRect = CGRect(x: 100.0,y: 100.0,width: 20.0,height: 20.0)
-//    present(alertController, animated: true, completion: nil)
-//  }
-  
   func tapProfileEditButton() {
     let alertController = UIAlertController(title: "プロフィールの編集", message: "新しいユーザーネームを入力してください。", preferredStyle:.alert)
     alertController.addTextField(configurationHandler: {(text:UITextField!) -> Void in
@@ -282,7 +203,5 @@ class UserProfileController: UICollectionViewController,UICollectionViewDelegate
     alertController.popoverPresentationController?.sourceRect = CGRect(x: 100.0,y: 100.0,width: 20.0,height: 20.0)
     present(alertController, animated: true, completion: nil)
   }
-  
-
   
 }

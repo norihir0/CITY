@@ -34,23 +34,10 @@ class ContentController: UIViewController{
         imageView.loadImage(urlString: imageUrl)
       }
     }
-    //showPhoto()
-//    UITabBar.appearance().tintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
-//    UITabBar.appearance().barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.1)
   }
-
-//  func showPhoto() {
-//    self.imageView.loadImage(urlString: imageUrl)
-//    //print(self.imageUrl)
-//    { (err) in
-//      print("Failed to fetch posts:", err)
-//    }
-//  }
   
   let imageView: CustomImageView = {
     let iv = CustomImageView()
-    //iv.loadImage(urlString: imageUrl)
-    //iv.image = UIImage(named:"view1")!.withRenderingMode(.alwaysOriginal)
     iv.contentMode = .scaleAspectFill
     iv.clipsToBounds = true
     return iv
