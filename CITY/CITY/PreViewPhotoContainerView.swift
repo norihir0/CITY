@@ -173,5 +173,6 @@ class PreviewPhotoContainerView: UIView, UITextViewDelegate{
     })
     self.removeFromSuperview()
   }
+  
 }
 

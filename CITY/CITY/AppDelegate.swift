@@ -3,13 +3,10 @@
 import UIKit
 import Firebase
 import GoogleMaps
-//import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder,UIApplicationDelegate{
-  
   var window: UIWindow?
-  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     FirebaseApp.configure()
     GMSServices.provideAPIKey("AIzaSyDq8LHXDykJvrs-e-YPBF6zJH9nRvxi-Ow")
@@ -17,7 +14,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate{
     window?.rootViewController = MainTabBarController()
     return true
   }
-  
+
   func applicationWillResignActive(_ application: UIApplication) {
   }
   

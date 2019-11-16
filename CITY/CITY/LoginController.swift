@@ -4,7 +4,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class LoginController: UIViewController{
+class LoginController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()

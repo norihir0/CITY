@@ -19,7 +19,6 @@ class MainTabBarController: UITabBarController,UITabBarControllerDelegate{
     }
     setupViewControllers()
   }
-  
 
   func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
     let index = viewControllers?.firstIndex(of: viewController)
