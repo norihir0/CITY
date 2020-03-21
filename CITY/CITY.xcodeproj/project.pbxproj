@@ -533,7 +533,7 @@
 				BUNDLE_ID_SUFFIX = "-production";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9E7JYW94G2;
+				DEVELOPMENT_TEAM = HEED9JCGC4;
 				INFOPLIST_FILE = CITY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
